@@ -136,7 +136,8 @@
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
 .service-card:hover {
@@ -178,6 +179,7 @@
     color: var(--salmon-pink);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
 }
 
