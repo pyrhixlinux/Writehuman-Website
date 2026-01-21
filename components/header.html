@@ -22,19 +22,17 @@
 
       <div class="header-user-actions">
 
-        <button class="action-btn">
+        <a href="login.html" class="action-btn">
           <ion-icon name="person-outline"></ion-icon>
-        </button>
+        </a>
 
-        <button class="action-btn">
+        <a href="service-reviews.html" class="action-btn">
           <ion-icon name="heart-outline"></ion-icon>
-          <span class="count">0</span>
-        </button>
+        </a>
 
-        <button class="action-btn">
+        <a href="services.html" class="action-btn">
           <ion-icon name="bag-handle-outline"></ion-icon>
-          <span class="count">0</span>
-        </button>
+        </a>
 
       </div>
 
@@ -68,30 +66,71 @@
 
   <div class="mobile-bottom-navigation">
 
-    <button class="action-btn" data-mobile-menu-open-btn>
+    <a href="#footer-nav" class="action-btn">
       <ion-icon name="menu-outline"></ion-icon>
-    </button>
+    </a>
 
-    <button class="action-btn">
+    <a href="services.html" class="action-btn">
       <ion-icon name="bag-handle-outline"></ion-icon>
+    </a>
 
-      <span class="count">0</span>
-    </button>
-
-    <button class="action-btn">
+    <a href="index.html" class="action-btn">
       <ion-icon name="home-outline"></ion-icon>
-    </button>
+    </a>
 
-    <button class="action-btn">
+    <a href="service-reviews.html" class="action-btn">
       <ion-icon name="heart-outline"></ion-icon>
+    </a>
 
-      <span class="count">0</span>
-    </button>
-
-    <button class="action-btn" data-mobile-menu-open-btn>
+    <button class="action-btn" id="mobile-service-btn">
       <ion-icon name="grid-outline"></ion-icon>
     </button>
 
+  </div>
+
+  <div class="overlay" data-overlay></div>
+
+  <div class="mobile-service-popup" data-mobile-service-popup>
+    <div class="popup-header">
+      <h3 class="popup-title">Layanan Kami</h3>
+      <button class="popup-close-btn" data-mobile-service-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+    <div class="popup-body">
+      <a href="jasajurnaldetail.html" class="service-popup-item">
+        <div class="icon-box"><ion-icon name="library-outline"></ion-icon></div>
+        <span>Jasa Jurnal</span>
+      </a>
+      <a href="jasaskripsidetail.html" class="service-popup-item">
+        <div class="icon-box"><ion-icon name="school-outline"></ion-icon></div>
+        <span>Bimbingan Skripsi</span>
+      </a>
+      <a href="jasaparafasedetail.html" class="service-popup-item">
+        <div class="icon-box"><ion-icon name="options-outline"></ion-icon></div>
+        <span>Parafrase/Turnitin</span>
+      </a>
+      <a href="cekturnitindetail.html" class="service-popup-item">
+        <div class="icon-box"><ion-icon name="scan-outline"></ion-icon></div>
+        <span>Cek Turnitin</span>
+      </a>
+      <a href="jasaketikdetail.html" class="service-popup-item">
+        <div class="icon-box"><ion-icon name="document-text-outline"></ion-icon></div>
+        <span>Jasa Ketik</span>
+      </a>
+      <a href="jasadesaindetail.html" class="service-popup-item">
+        <div class="icon-box"><ion-icon name="color-palette-outline"></ion-icon></div>
+        <span>Desain & Editing</span>
+      </a>
+      <a href="makalahdetail.html" class="service-popup-item">
+        <div class="icon-box"><ion-icon name="newspaper-outline"></ion-icon></div>
+        <span>Jasa Makalah</span>
+      </a>
+      <a href="jasaeditingdetail.html" class="service-popup-item">
+        <div class="icon-box"><ion-icon name="create-outline"></ion-icon></div>
+        <span>Jasa Editing</span>
+      </a>
+    </div>
   </div>
 
   <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>

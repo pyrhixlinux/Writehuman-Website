@@ -2,7 +2,7 @@
 
 /* --- Variables & Reset Overrides --- */
 :root {
-    --primary-gradient: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    --primary-gradient: linear-gradient(135deg, #25caf3 0%, #FF8E53 100%);
     --bg-light: #f8f9fa;
     --text-dark: #333;
     --text-gray: #666;
@@ -352,6 +352,9 @@
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
+    }
+    .hero-premium {
+        background-position: 85% center;
     }
     .services-grid {
         grid-template-columns: 1fr;

@@ -102,7 +102,7 @@ footer {
   transition: var(--transition-timing);
 }
 
-.footer-nav-link:hover { color: var(--salmon-pink); }
+a.footer-nav-link:hover { color: var(--salmon-pink); }
 
 .footer-nav-item.flex {
   display: flex;
