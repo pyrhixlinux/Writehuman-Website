@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - WriteHuman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/supabase-pages.css">
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div id="toast-container"></div>
+
+  <div class="sp-container">
+    <div class="sp-header">
+      <h1>Dashboard User</h1>
+      <div>
+        <a href="services.html" class="btn btn-primary"><ion-icon name="grid-outline"></ion-icon> Pilih Layanan</a>
+        <button id="logout-btn" class="btn btn-danger" style="margin-left:10px;"><ion-icon name="log-out-outline"></ion-icon> Logout</button>
+      </div>
+    </div>
+
+    <h2 style="margin-bottom:20px; color:#333;">Pesanan Saya</h2>
+    <div id="orders-list">
+      <div style="text-align:center; padding:50px; color:#666;">
+        <span class="loader"></span> Memuat data...
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<div class="testimonial">
+
+  <h2 class="title">Apa Kata Mereka?</h2>
+
+  <div class="testimonial-content-container">
+
+    <!-- Review Form (Static UI) -->
+    <div class="testimonial-form-card">
+      <h3 class="form-title">Tulis Ulasan Anda</h3>
+      <form action="#" class="review-form">
+        <input type="text" name="name" placeholder="Nama Anda" class="form-input" required>
+        <select name="service" class="form-input">
+          <option value="" disabled selected>Pilih Layanan</option>
+          <option value="skripsi">Jasa Skripsi</option>
+          <option value="jurnal">Jasa Jurnal</option>
+          <option value="parafase">Jasa Parafase</option>
+          <option value="ketik">Jasa Ketik</option>
+          <option value="desain">Jasa Desain</option>
+          <option value="makalah">Makalah</option>
+          <option value="turnitin">Cek Turnitin</option>
+          <option value="editing">Jasa Editing</option>
+        </select>
+        <div class="rating-input">
+          <span>Beri Rating:</span>
+          <div class="stars">
+            <ion-icon name="star" data-value="1"></ion-icon>
+            <ion-icon name="star" data-value="2"></ion-icon>
+            <ion-icon name="star" data-value="3"></ion-icon>
+            <ion-icon name="star" data-value="4"></ion-icon>
+            <ion-icon name="star" data-value="5"></ion-icon>
+          </div>
+          <input type="hidden" name="rating" id="review-rating-value" value="5">
+        </div>
+        <textarea name="comment" placeholder="Bagaimana pengalaman Anda?" class="form-input form-textarea" required></textarea>
+        <button type="submit" class="btn-submit">Kirim Ulasan</button>
+      </form>
+    </div>
+
+    <!-- Review List -->
+    <div class="testimonial-list-card">
+      <h3 class="list-title">Ulasan Terbaru</h3>
+      
+      <div class="review-item">
+        <div class="review-header">
+            <div class="reviewer-info">
+                <img src="./assets/images/testimonial-1.jpg" alt="user" class="reviewer-avatar">
+                <div>
+                    <p class="reviewer-name">Budi Santoso</p>
+                    <div class="review-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <span class="review-date">12 Jan 2026</span>
+        </div>
+        <p class="review-service">Layanan: <span class="service-tag">Jasa Skripsi</span></p>
+        <p class="review-text">Pelayanan sangat cepat dan ramah. Revisi dikerjakan dengan teliti sampai acc dosen. Makasi min!</p>
+        <div class="review-images">
+             <!-- Placeholder for user uploaded images if any -->
+        </div>
+      </div>
+
+       <div class="review-item">
+        <div class="review-header">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar placeholder">S</div>
+                <div>
+                    <p class="reviewer-name">Siti Aminah</p>
+                    <div class="review-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <span class="review-date">10 Jan 2026</span>
+        </div>
+        <p class="review-service">Layanan: <span class="service-tag">Cek Turnitin</span></p>
+        <p class="review-text">Hasil keluar hitungan menit. Recommended banget buat yang lagi buru-buru.</p>
+      </div>
+
+       <div class="review-item">
+        <div class="review-header">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar placeholder">R</div>
+                <div>
+                    <p class="reviewer-name">Rizky P.</p>
+                    <div class="review-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <span class="review-date">08 Jan 2026</span>
+        </div>
+        <p class="review-service">Layanan: <span class="service-tag">Jasa Jurnal</span></p>
+        <p class="review-text">Jurnal terbit tepat waktu dan terindeks Sinta. Mantap!</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Reviews - WriteHuman</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/service-reviews.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="overlay" data-overlay></div>
+
+  <!-- HEADER -->
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="hero-content">
+          <a href="index.html" class="back-link">
+            <ion-icon name="arrow-back-outline"></ion-icon> Kembali ke Beranda
+          </a>
+          <p class="hero-subtitle">Professional Service</p>
+          <h1 class="hero-title" id="service-title">Jasa Kami</h1>
+          <p class="hero-desc">
+            Lihat apa kata mereka yang telah menggunakan layanan ini.
+            Kepuasan Anda adalah prioritas utama kami.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="service-testimonials">
+        <div class="container">
+            <h2 class="section-title">Ulasan Pelanggan</h2>
+            
+            <div class="testimonials-grid" id="reviews-container">
+                <!-- Reviews will be injected here via JS -->
+                 <div class="loading-spinner"></div>
+            </div>
+
+            <div class="no-reviews" id="no-reviews" style="display: none;">
+                <p>Belum ada ulasan untuk layanan ini. Jadilah yang pertama!</p>
+            </div>
+        </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+
+  <!-- CUSTOM JS -->
+  <script src="./assets/js/html-loader.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="./assets/js/supabase-client.js"></script>
+  <script type="module" src="./assets/js/service-reviews.js"></script>
+
+  <!-- IONICONS -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

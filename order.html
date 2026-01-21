@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Buat Pesanan - WriteHuman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/supabase-pages.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div id="toast-container"></div>
+
+  <div class="sp-container">
+    <a href="dashboard.html" class="btn" style="background:none; color:#555; padding-left:0; margin-bottom:15px;">
+      <ion-icon name="arrow-back-outline"></ion-icon> Kembali ke Dashboard
+    </a>
+    
+    <div class="form-card">
+      <h2 style="margin-top:0; margin-bottom:25px; border-bottom:1px solid #eee; padding-bottom:15px;">Form Pemesanan Baru</h2>
+      <form id="order-form">
+        <div class="form-group">
+          <label for="title">Judul Pesanan / Topik</label>
+          <input type="text" id="title" placeholder="Contoh: Skripsi Bab 1 tentang AI" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="description">Detail & Instruksi Lengkap</label>
+          <textarea id="description" rows="8" placeholder="Jelaskan kebutuhan Anda, format, deadline, referensi, dll..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:15px;">
+           <ion-icon name="paper-plane-outline"></ion-icon> Kirim Pesanan
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./assets/js/order.js"></script>
+</body>
+</html>

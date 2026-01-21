@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasa Parafase Turnitin - WriteHuman</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/product-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <div class="product-detail-page">
+      <div class="container">
+        
+        <a href="services.html" class="btn-back-service">
+            <ion-icon name="arrow-back-outline"></ion-icon> Kembali ke Layanan
+        </a>
+
+        <!-- Service Header -->
+        <div class="service-header text-center mb-5">
+            <h1 class="service-title">Jasa Parafrase / Turnitin</h1>
+            <p class="service-subtitle">Turunkan plagiasi, lolos Turnitin tanpa merusak makna.</p>
+            <div class="badges-container">
+                <span class="badge-item"><ion-icon name="checkmark-done-outline"></ion-icon> Lolos Turnitin</span>
+                <span class="badge-item"><ion-icon name="hand-left-outline"></ion-icon> Manual Rewriting</span>
+                <span class="badge-item"><ion-icon name="flash-outline"></ion-icon> Proses Cepat</span>
+            </div>
+        </div>
+
+        <div class="product-detail-container layout-grid">
+            
+            <!-- Left Column: Info & Steps -->
+            <div class="left-column">
+                
+                <div class="info-card">
+                    <h3>Tentang Layanan</h3>
+                    <p>Skor Turnitin merah? Jangan panik. Kami bantu menurunkan similarity index dokumen Anda dengan teknik paraphrasing manual (Human Rewriting). Kami menjamin makna tulisan tidak berubah, namun struktur kalimat diperbarui agar lolos cek plagiasi.</p>
+                    <ul class="feature-list">
+                        <li><ion-icon name="checkmark-circle"></ion-icon> 100% Manual (Tanpa Bot/AI)</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Garansi Lolos Turnitin (< 20%)</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Termasuk Laporan Turnitin Akhir</li>
+                    </ul>
+                </div>
+
+                <div class="steps-card">
+                    <h3>Cara Order</h3>
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Upload File</h4>
+                            <p>Upload dokumen Anda (Word/PDF) untuk dihitung otomatis.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Pilih Paket & Deadline</h4>
+                            <p>Sesuaikan dengan budget dan kebutuhan waktu Anda.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Konfirmasi & Bayar</h4>
+                            <p>Lakukan pembayaran agar tim segera memproses.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Download Hasil</h4>
+                            <p>Terima file hasil parafrase + bukti lolos Turnitin.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Order Form -->
+            <div class="right-column">
+                <div class="order-card">
+                    <h3>Form Pemesanan Parafrase</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" id="custName" required placeholder="Nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Aktif</label>
+                            <input type="email" id="custEmail" required placeholder="email@kampus.ac.id">
+                        </div>
+                        <div class="form-group">
+                            <label>Asal Kampus (Opsional)</label>
+                            <input type="text" id="custCampus" placeholder="Univ...">
+                        </div>
+
+                        <!-- Upload Simulation -->
+                        <div class="form-group">
+                            <label>Upload Dokumen (DOC/PDF)</label>
+                            <div class="file-upload-box" id="fileDropZone" style="border: 2px dashed #ccc; padding: 20px; text-align: center; border-radius: 8px; cursor: pointer; transition: 0.3s;">
+                                <ion-icon name="cloud-upload-outline" style="font-size: 2rem; color: #aaa;"></ion-icon>
+                                <p style="margin: 10px 0; color: #666; font-size: 0.9rem;">Klik atau drop file di sini</p>
+                                <input type="file" id="fileInput" accept=".doc,.docx,.pdf" style="display: none;">
+                            </div>
+                            <div id="fileInfo" style="display: none; margin-top: 10px; background: #e3f2fd; padding: 10px; border-radius: 6px; font-size: 0.9rem; color: #0d47a1;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span id="fileName">dokumen.docx</span>
+                                    <span id="wordCountBadge" style="background: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold;">0 Kata</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Jenis Layanan</label>
+                            <select id="serviceLevel" required>
+                                <option value="standard">Standar (Parafrase Only) - Rp 50/kata</option>
+                                <option value="premium">Premium (+Manual Edit & Flow) - Rp 80/kata</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Pilihan Deadline</label>
+                            <select id="deadlineSelect" required>
+                                <option value="normal" selected>Normal (2-3 Hari)</option>
+                                <option value="fast">Cepat (24 Jam) +30%</option>
+                                <option value="express">Express (< 12 Jam) +50%</option>
+                            </select>
+                        </div>
+
+                        <!-- Addons -->
+                        <div class="checkbox-group">
+                             <label class="check-box">
+                                <input type="checkbox" id="checkTurnitin" checked disabled> Sertakan Laporan Turnitin (Free)
+                            </label>
+                        </div>
+
+                        <div class="price-estimation-box mt-4">
+                            <label>Estimasi Harga</label>
+                            <div class="price-value" id="priceDisplay">Rp 0</div>
+                            <small class="disclaimer-text">Harga berdasarkan jumlah kata terdeteksi. Finalisasi oleh tim.</small>
+                        </div>
+
+                        <button type="submit" class="btn-submit-order">
+                            Kirim Pesanan <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  <script src="./assets/js/html-loader.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Supabase Import Map -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import { submitOrder } from './assets/js/order-service.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const fileInput = document.getElementById('fileInput');
+        const fileDropZone = document.getElementById('fileDropZone');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const wordCountBadge = document.getElementById('wordCountBadge');
+        
+        const serviceLevel = document.getElementById('serviceLevel');
+        const deadlineSelect = document.getElementById('deadlineSelect');
+        const priceDisplay = document.getElementById('priceDisplay');
+        const orderForm = document.getElementById('orderForm');
+
+        let currentWordCount = 0;
+
+        // Base Rates per Word
+        const RATES = {
+            standard: 50,
+            premium: 80
+        };
+
+        const DEADLINE_MULTIPLIER = {
+            'normal': 1.0,
+            'fast': 1.3,
+            'express': 1.5
+        };
+
+        function formatRupiah(amount) {
+            return 'Rp ' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        // Dropzone interactions
+        fileDropZone.addEventListener('click', () => fileInput.click());
+        fileDropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileDropZone.style.borderColor = 'var(--salmon-pink)';
+            fileDropZone.style.background = '#fff5f5';
+        });
+        fileDropZone.addEventListener('dragleave', () => {
+             fileDropZone.style.borderColor = '#ccc';
+             fileDropZone.style.background = 'transparent';
+        });
+        fileDropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileDropZone.style.borderColor = '#ccc';
+            fileDropZone.style.background = 'transparent';
+            if(e.dataTransfer.files.length) {
+                handleFile(e.dataTransfer.files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if(e.target.files.length) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        function handleFile(file) {
+            fileName.textContent = file.name;
+            fileInfo.style.display = 'block';
+            
+            // Simulate Word Count Check
+            wordCountBadge.textContent = "Menghitung...";
+            setTimeout(() => {
+                // Random word count simulation between 1000 - 5000 words
+                currentWordCount = Math.floor(Math.random() * (5000 - 1000 + 1) + 1000); 
+                wordCountBadge.textContent = `${currentWordCount} Kata`;
+                calculatePrice();
+            }, 1000);
+        }
+
+        function calculatePrice() {
+            if (currentWordCount === 0) {
+                priceDisplay.textContent = "Upload File Dulu";
+                return;
+            }
+
+            let ratePerWord = RATES[serviceLevel.value];
+
+            const multiplier = DEADLINE_MULTIPLIER[deadlineSelect.value];
+            const total = currentWordCount * ratePerWord * multiplier;
+
+            priceDisplay.textContent = formatRupiah(Math.round(total));
+        }
+
+        // Listeners
+        serviceLevel.addEventListener('change', calculatePrice);
+        deadlineSelect.addEventListener('change', calculatePrice);
+
+        // Submit
+        orderForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (currentWordCount === 0) {
+                alert("Harap upload file terlebih dahulu!");
+                return;
+            }
+
+            const btn = document.querySelector('.btn-submit-order');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="loader"></span> Mengupload...';
+            btn.disabled = true;
+
+            const serviceTxt = serviceLevel.options[serviceLevel.selectedIndex].text;
+            const deadlineTxt = deadlineSelect.options[deadlineSelect.selectedIndex].text;
+            const price = priceDisplay.textContent;
+
+            // Prepare Data
+            const orderData = {
+                title: `Parafrase: ${fileName.textContent}`,
+                description: `${serviceTxt} | ${currentWordCount} Kata`,
+                service: 'Jasa Parafrase',
+                status: 'Menunggu Konfirmasi',
+                price: price,
+                deadline: deadlineTxt,
+                file_url: null
+            };
+
+            const success = await submitOrder(orderData);
+
+            if (!success) {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        });
+    });
+  </script>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="./assets/js/html-loader.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+/* Write Review Section */
+.write-review-section {
+  padding: 40px 0;
+  margin-bottom: 30px;
+  background: white;
+}
+
+.review-form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.review-form-container .title {
+  color: var(--onyx);
+  font-size: 1.5rem;
+  font-weight: var(--weight-700);
+  margin-bottom: 10px;
+}
+
+.review-form-container .subtitle {
+  color: var(--sonic-silver);
+  font-size: var(--fs-7);
+  margin-bottom: 30px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--fs-7);
+  transition: border-color 0.3s ease;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  border-color: var(--salmon-pink);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.rating-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.rating-group label {
+  font-weight: var(--weight-600);
+  color: var(--onyx);
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+  font-size: 1.5rem;
+  color: #ff9900;
+  cursor: pointer;
+}
+
+.stars ion-icon {
+  transition: transform 0.2s;
+}
+
+.stars ion-icon:hover {
+  transform: scale(1.1);
+}
+
+.stars ion-icon.filled {
+  @apply text-yellow-400; /* If using tailwind, otherwise standard css */
+}
+
+/* Custom filled star logic provided by JS usually, but here default style */
+.stars ion-icon[name="star"] {
+  color: #ffb700;
+}
+
+.btn-submit {
+  background: var(--salmon-pink);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-weight: var(--weight-600);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background: var(--eerie-black);
+}
+
+@media (min-width: 768px) {
+    .btn-submit {
+        width: auto;
+        padding: 12px 50px;
+    }
+}

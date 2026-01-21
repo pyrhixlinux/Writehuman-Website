@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasa Skripsi Pro - WriteHuman</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/product-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <div class="product-detail-page">
+      <div class="container">
+        
+        <a href="services.html" class="btn-back-service">
+            <ion-icon name="arrow-back-outline"></ion-icon> Kembali ke Layanan
+        </a>
+
+        <!-- Service Header -->
+        <div class="service-header text-center mb-5">
+            <h1 class="service-title">Jasa Bimbingan Skripsi</h1>
+            <p class="service-subtitle">Bimbingan intensif dari judul hingga wisuda. Per BAB atau Full Skripsi.</p>
+            <div class="badges-container">
+                <span class="badge-item"><ion-icon name="school-outline"></ion-icon> Mentor S2/S3</span>
+                <span class="badge-item"><ion-icon name="refresh-circle-outline"></ion-icon> Revisi Sampai ACC</span>
+                <span class="badge-item"><ion-icon name="shield-checkmark-outline"></ion-icon> 100% Private & Aman</span>
+            </div>
+        </div>
+
+        <div class="product-detail-container layout-grid">
+            
+            <!-- Left Column: Info & Steps -->
+            <div class="left-column">
+                
+                <div class="info-card">
+                    <h3>Tentang Layanan</h3>
+                    <p>Layanan ini menghadirkan pendampingan akademik profesional untuk mahasiswa tingkat akhir. Anda tidak hanya mendapatkan bantuan penulisan, tetapi juga pemahaman mendalam tentang materi skripsi Anda. Kami menyesuaikan dengan pedoman penulisan kampus masing-masing.</p>
+                    <ul class="feature-list">
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Bisa request Per BAB (sesuai budget)</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Diskusi via WhatsApp / GMeet</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Free Cek Turnitin Premium tiap progres</li>
+                    </ul>
+                </div>
+
+                <div class="steps-card">
+                    <h3>Cara Kerja</h3>
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Pilih Paket & Isi Detail</h4>
+                            <p>Tentukan mau bimbingan Full atau Ketengan (Per BAB).</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Estimasi Harga & Konfirmasi</h4>
+                            <p>Sistem hitung estimasi awal, tim kami verifikasi detailnya.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Proses Pengerjaan</h4>
+                            <p>Mentor mengerjakan draft, lalu Anda review dulu.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Revisi & Finalisasi</h4>
+                            <p>Revisi sepuasnya sampai ACC dosen pembimbing.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Order Form -->
+            <div class="right-column">
+                <div class="order-card">
+                    <h3>Form Pemesanan Skripsi</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" id="custName" required placeholder="Nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Aktif</label>
+                            <input type="email" id="custEmail" required placeholder="email@kampus.ac.id">
+                        </div>
+                        <div class="form-group">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div>
+                                    <label>Asal Kampus</label>
+                                    <input type="text" id="custCampus" required placeholder="Univ...">
+                                </div>
+                                <div>
+                                    <label>Program Studi</label>
+                                    <select id="custMajor" required>
+                                        <option value="economy">Ekonomi / Manajemen</option>
+                                        <option value="education">Pendidikan (Keguruan)</option>
+                                        <option value="social">Hukum / Sosial / Politik</option>
+                                        <option value="tech">Teknik / Komputer (+20%)</option>
+                                        <option value="health">Kesehatan / Kedokteran (+20%)</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Jenis Layanan</label>
+                            <div class="service-type-toggle">
+                                <label class="radio-box">
+                                    <input type="radio" name="serviceType" value="per_bab" checked>
+                                    <span class="box-content">
+                                        <span class="box-title">Per BAB</span>
+                                        <span class="box-desc">Pesan sesua kebutuhan</span>
+                                    </span>
+                                </label>
+                                <label class="radio-box">
+                                    <input type="radio" name="serviceType" value="full">
+                                    <span class="box-content">
+                                        <span class="box-title">Full Skripsi</span>
+                                        <span class="box-desc">Paket Hemat Lulus</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Section Per BAB -->
+                        <div id="sectionPerBab" class="conditional-section">
+                            <label>Pilih BAB yang dibutuhkan (Multi-select)</label>
+                            <div class="checkbox-group">
+                                <label class="check-box">
+                                    <input type="checkbox" name="chapters" value="1" class="chap-check"> Bab 1 (Pendahuluan)
+                                </label>
+                                <label class="check-box">
+                                    <input type="checkbox" name="chapters" value="2" class="chap-check"> Bab 2 (Tinj. Pustaka)
+                                </label>
+                                <label class="check-box">
+                                    <input type="checkbox" name="chapters" value="3" class="chap-check"> Bab 3 (Metodologi)
+                                </label>
+                                <label class="check-box">
+                                    <input type="checkbox" name="chapters" value="4" class="chap-check"> Bab 4 (Pembahasan)
+                                </label>
+                                <label class="check-box">
+                                    <input type="checkbox" name="chapters" value="5" class="chap-check"> Bab 5 (Penutup)
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Section Full -->
+                        <div id="sectionFull" class="conditional-section" style="display:none;">
+                            <label>Pilih Paket</label>
+                            <select id="packageType">
+                                <option value="standard">Paket Standar (3-4 Bulan)</option>
+                                <option value="intensive">Paket Kilat / Intensif (1-2 Bulan)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label>Judul / Topik Skripsi</label>
+                            <input type="text" id="msTitle" required placeholder="Judul Proposal/Skripsi">
+                        </div>
+
+                        <div class="price-estimation-box">
+                            <label>Estimasi Harga</label>
+                            <div class="price-value" id="priceDisplay">Rp 0</div>
+                            <small class="disclaimer-text">Harga tergantung jurusan & tingkat kesulitan. Finalisasi via WhatsApp.</small>
+                        </div>
+
+                        <button type="submit" class="btn-submit-order">
+                            Kirim Pesanan <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="./assets/js/html-loader.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Supabase Import Map -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import { submitOrder } from './assets/js/order-service.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const orderForm = document.getElementById('orderForm');
+        const priceDisplay = document.getElementById('priceDisplay');
+        const serviceTypeRadios = document.querySelectorAll('input[name="serviceType"]');
+        const sectionPerBab = document.getElementById('sectionPerBab');
+        const sectionFull = document.getElementById('sectionFull');
+        const majorSelect = document.getElementById('custMajor');
+        const packageSelect = document.getElementById('packageType');
+        const chapterChecks = document.querySelectorAll('.chap-check');
+
+        // Rates Configuration
+        const RATES = {
+            base_bab: 350000,   // Per Bab basis
+            full_std: 3500000,  // Full Standar
+            full_exp: 5000000   // Full Kilat
+        };
+
+        const MAJOR_MULTIPLIER = {
+            'economy': 1.0,
+            'education': 1.0,
+            'social': 1.0,
+            'tech': 1.3,     // Teknik lebih mahal
+            'health': 1.3,   // Kesehatan lebih mahal
+            'other': 1.1
+        };
+
+        function formatRupiah(amount) {
+            return 'Rp ' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        // Toggle Sections
+        function updateSectionVisibility() {
+            const type = document.querySelector('input[name="serviceType"]:checked').value;
+            if (type === 'per_bab') {
+                sectionPerBab.style.display = 'block';
+                sectionFull.style.display = 'none';
+            } else {
+                sectionPerBab.style.display = 'none';
+                sectionFull.style.display = 'block';
+            }
+            calculatePrice();
+        }
+
+        // Calculation Logic
+        function calculatePrice() {
+            const type = document.querySelector('input[name="serviceType"]:checked').value;
+            const major = majorSelect.value;
+            const multiplier = MAJOR_MULTIPLIER[major] || 1.0;
+            
+            let total = 0;
+
+            if (type === 'per_bab') {
+                // Count selected chapters
+                let count = 0;
+                chapterChecks.forEach(cb => {
+                    if (cb.checked) count++;
+                });
+                total = count * RATES.base_bab * multiplier;
+            } else {
+                // Full Package
+                const pkg = packageSelect.value;
+                const base = (pkg === 'intensive') ? RATES.full_exp : RATES.full_std;
+                total = base * multiplier;
+            }
+
+            priceDisplay.textContent = formatRupiah(Math.round(total));
+        }
+
+        // Event Listeners
+        serviceTypeRadios.forEach(r => r.addEventListener('change', updateSectionVisibility));
+        majorSelect.addEventListener('change', calculatePrice);
+        packageSelect.addEventListener('change', calculatePrice);
+        chapterChecks.forEach(c => c.addEventListener('change', calculatePrice));
+
+        // Submit Handler
+        orderForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const btn = document.querySelector('.btn-submit-order');
+            const originalText = btn.innerHTML; // Save original text
+            btn.innerHTML = '<span class="loader"></span> Memproses...';
+            btn.disabled = true;
+
+            // Gather Data
+            const title = document.getElementById('msTitle').value;
+            const typeValue = document.querySelector('input[name="serviceType"]:checked').value;
+            const price = priceDisplay.textContent;
+            const major = majorSelect.options[majorSelect.selectedIndex].text;
+            
+            let desc = "";
+            let serviceName = "Jasa Skripsi";
+
+            if (typeValue === 'per_bab') {
+                const selectedChaps = Array.from(chapterChecks)
+                    .filter(c => c.checked)
+                    .map(c => c.parentElement.textContent.trim())
+                    .join(', ');
+                desc = `Jurusan: ${major} | Ketengan: ${selectedChaps}`;
+                serviceName += " (Per BAB)";
+            } else {
+                const pkgText = packageSelect.options[packageSelect.selectedIndex].text;
+                desc = `Jurusan: ${major} | Full: ${pkgText}`;
+                serviceName += " (Full Paket)";
+            }
+
+            // Prepare Data
+            const orderData = {
+                title: title,
+                description: desc,
+                service: serviceName,
+                status: 'Menunggu Konfirmasi',
+                price: price,
+                deadline: 'TBA', // Will be discussed
+                file_url: null
+            };
+
+            const success = await submitOrder(orderData);
+
+            if (!success) {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        });
+
+        // Init
+        updateSectionVisibility();
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasa Publikasi Jurnal - WriteHuman</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/product-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <div class="product-detail-page">
+      <div class="container">
+        
+        <a href="services.html" class="btn-back-service">
+            <ion-icon name="arrow-back-outline"></ion-icon> Kembali ke Layanan
+        </a>
+
+        <!-- Service Header -->
+        <div class="service-header text-center mb-5">
+            <h1 class="service-title">Jasa Publikasi Jurnal Ilmiah</h1>
+            <p class="service-subtitle">Konversi naskah, submit, hingga publish dengan mudah</p>
+            <div class="badges-container">
+                <span class="badge-item"><ion-icon name="shield-checkmark-outline"></ion-icon> Garansi Terbit</span>
+                <span class="badge-item"><ion-icon name="refresh-circle-outline"></ion-icon> Revisi Unlimited</span>
+                <span class="badge-item"><ion-icon name="lock-closed-outline"></ion-icon> Aman & Rahasia</span>
+            </div>
+        </div>
+
+        <div class="product-detail-container layout-grid">
+            
+            <!-- Left Column: Info & Steps -->
+            <div class="left-column">
+                
+                <div class="info-card">
+                    <h3>Tentang Layanan</h3>
+                    <p>Layanan ini dikhususkan untuk mahasiswa yang membutuhkan publikasi jurnal sebagai syarat kelulusan. Tim kami akan membantu seluruh proses mulai dari konversi file skripsi/makalah menjadi format jurnal, submit ke OJS, korespondensi dengan reviewer, hingga terbit (publish).</p>
+                    <ul class="feature-list">
+                        <li><ion-icon name="checkmark-circle"></ion-icon> User tidak perlu pusing memilih target jurnal</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Tim kami yang akan mencarikan jurnal yang sesuai</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Proses transparan dan update berkala</li>
+                    </ul>
+                </div>
+
+                <div class="steps-card">
+                    <h3>Cara Kerja</h3>
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Isi Form Pemesanan</h4>
+                            <p>Lengkapi data diri dan detail naskah Anda.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Estimasi Harga Otomatis</h4>
+                            <p>Sistem akan menghitung biaya berdasarkan progress naskah.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Konfirmasi Tim</h4>
+                            <p>Tim kami akan memvalidasi pesanan Anda segera.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Proses & Tracking</h4>
+                            <p>Pantau progress dan upload file via Dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Order Form -->
+            <div class="right-column">
+                <div class="order-card">
+                    <h3>Form Pemesanan Jasa</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" id="custName" required placeholder="Contoh: Budi Santoso">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Aktif</label>
+                            <input type="email" id="custEmail" required placeholder="email@kampus.ac.id">
+                        </div>
+                        <div class="form-group">
+                            <label>Asal Kampus</label>
+                            <input type="text" id="custCampus" required placeholder="Nama Universitas">
+                        </div>
+                        <div class="form-group">
+                            <label>Judul / Topik Naskah</label>
+                            <input type="text" id="msTitle" required placeholder="Judul Skripsi/Jurnal">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Progres Naskah Saat Ini (%)</label>
+                            <input type="number" id="msProgress" min="1" max="100" placeholder="Contoh: 40" required>
+                            <small class="text-muted">Isi perkiraan seberapa lengkap naskah Anda saat ini, bukan tingkat kesulitan.</small>
+                            
+                            <!-- Dynamic Feedback -->
+                            <div id="progressFeedback" class="progress-feedback-text"></div>
+
+                            <!-- Guidance Box -->
+                            <div class="progress-guide-box">
+                                <h6><ion-icon name="information-circle-outline"></ion-icon> Panduan Mengisi Progres:</h6>
+                                <ul>
+                                    <li><strong>0–20%</strong> : Baru judul / outline doang</li>
+                                    <li><strong>30–50%</strong> : Beberapa bab sudah ada, belum rapi</li>
+                                    <li><strong>60–80%</strong> : Hampir lengkap, tinggal revisi + format</li>
+                                    <li><strong>90–100%</strong> : Udah jadi, tinggal convert + submit</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Pilihan Deadline</label>
+                            <select id="deadlineSelect" required>
+                                <option value="super_fast">0-3 Hari (Super Cepat) - Rp 5.000/%</option>
+                                <option value="fast">4-7 Hari (Cepat) - Rp 3.000/%</option>
+                                <option value="normal" selected>7 Hari (Normal) - Rp 2.000/%</option>
+                            </select>
+                        </div>
+
+                        <div class="price-estimation-box">
+                            <label>Estimasi Harga</label>
+                            <div class="price-value" id="priceDisplay">Rp 0</div>
+                            <small class="disclaimer-text">Harga bersifat estimasi dan akan dikonfirmasi oleh tim setelah pengecekan naskah.</small>
+                        </div>
+
+                        <button type="submit" class="btn-submit-order">
+                            Kirim Pesanan <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="./assets/js/html-loader.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Supabase Import Map -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import { submitOrder } from './assets/js/order-service.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const progressInput = document.getElementById('msProgress');
+        const deadlineSelect = document.getElementById('deadlineSelect');
+        const priceDisplay = document.getElementById('priceDisplay');
+        const orderForm = document.getElementById('orderForm');
+        const progressFeedback = document.getElementById('progressFeedback');
+
+        // Tarifs
+        const RATES = {
+            'super_fast': 5000,
+            'fast': 3000,
+            'normal': 2000
+        };
+
+        function formatRupiah(amount) {
+            return 'Rp ' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function getProgressCategory(val) {
+            if (val <= 0) return "";
+            if (val <= 20) return "Kategori: Baru mulai";
+            if (val <= 50) return "Kategori: Sebagian bab sudah ada";
+            if (val <= 80) return "Kategori: Hampir lengkap";
+            return "Kategori: Siap dikonversi ke jurnal";
+        }
+
+        function calculatePrice() {
+            let progress = parseInt(progressInput.value) || 0;
+            
+            // Show Feedback
+            progressFeedback.textContent = getProgressCategory(progress);
+
+            // Clamp progress 1-100 for Calc
+            if (progress > 100) progress = 100;
+            if (progress < 1) progress = 1;
+
+            const deadlineType = deadlineSelect.value;
+            const rate = RATES[deadlineType] || 2000;
+
+            const total = progress * rate;
+            priceDisplay.textContent = formatRupiah(total);
+        }
+
+        // Listeners
+        progressInput.addEventListener('input', calculatePrice);
+        deadlineSelect.addEventListener('change', calculatePrice);
+
+        // Initial Calc
+        calculatePrice();
+
+        // Handle Submit
+        orderForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const btn = document.querySelector('.btn-submit-order');
+            const originalText = btn.innerHTML;
+            
+            // Loading State
+            btn.innerHTML = '<span class="loader"></span> Memproses...';
+            btn.disabled = true;
+
+            // Get Values
+            const title = document.getElementById('msTitle').value;
+            const deadline = document.getElementById('deadlineSelect').options[document.getElementById('deadlineSelect').selectedIndex].text;
+            const price = priceDisplay.textContent;
+
+            // Prepare Data
+            const orderData = {
+                title: title,
+                description: `Deadline: ${deadline}`,
+                service: 'Jasa Publikasi Jurnal',
+                status: 'Menunggu Konfirmasi',
+                price: price,
+                deadline: deadline,
+                file_url: null
+            };
+
+            const success = await submitOrder(orderData);
+
+            if (!success) {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        });
+    });
+  </script>
+
+</body>
+
+</html>

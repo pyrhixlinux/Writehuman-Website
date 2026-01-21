@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - WriteHuman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Main CSS (Include supabase-pages.css imports) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/supabase-pages.css">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+</head>
+<body class="auth-body">
+
+  <div id="toast-container"></div>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <a href="index.html" style="text-decoration: none; color: #666; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; font-size: 0.9rem;">
+        <ion-icon name="arrow-back-outline"></ion-icon> Kembali ke Beranda
+      </a>
+      <h2>Masuk ke Akun</h2>
+      
+      <form id="login-form" class="auth-form">
+        <input type="email" id="email" placeholder="Email" required autocomplete="email">
+        <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+
+
+
+      <div class="auth-divider" style="margin-top:30px;">Belum punya akun?</div>
+
+      <form id="register-form" class="auth-form">
+        <input type="email" id="reg-email" placeholder="Email Baru" required autocomplete="email">
+        <input type="password" id="reg-password" placeholder="Password Baru" required autocomplete="new-password">
+        <button type="submit" class="btn" style="background:#4caf50; color:white;">Daftar Akun Baru</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./assets/js/supabase-client.js"></script>
+  <script type="module" src="./assets/js/toast.js"></script>
+  <script type="module" src="./assets/js/auth.js"></script>
+</body>
+</html>

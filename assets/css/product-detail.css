@@ -1,0 +1,374 @@
+/* Product Detail Page Styles */
+
+.product-detail-page {
+  padding: 40px 0;
+  background: #fdfdfd;
+}
+
+/* Replaced Breadcrumb with Back Button */
+.btn-back-service {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: var(--white);
+  color: var(--onyx);
+  border: 1px solid var(--cultured);
+  border-radius: 50px; /* Rounded pill shape */
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-decoration: none;
+}
+
+.btn-back-service ion-icon {
+  font-size: 1.2rem;
+}
+
+.btn-back-service:hover {
+  background-color: var(--salmon-pink);
+  color: var(--white);
+  border-color: var(--salmon-pink);
+  transform: translateX(-5px);
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Service Header */
+.service-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-title {
+    font-size: 2.2rem;
+    color: var(--onyx);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.service-subtitle {
+    color: var(--sonic-silver);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.badges-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.badge-item ion-icon {
+    font-size: 1.2rem;
+}
+
+/* Grid Layout */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 992px) {
+    .layout-grid {
+        grid-template-columns: 1.2fr 0.8fr; /* Left wider than right */
+        align-items: start;
+    }
+}
+
+/* Cards Common Style */
+.info-card, .steps-card, .order-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+}
+
+.info-card h3, .steps-card h3, .order-card h3 {
+    font-size: 1.4rem;
+    color: var(--onyx);
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--salmon-pink);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--sonic-silver);
+}
+
+.feature-list li ion-icon {
+    color: #2ecc71;
+    font-size: 1.2rem;
+}
+
+/* Steps */
+.step-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    width: 35px;
+    height: 35px;
+    background: var(--salmon-pink);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-size: 1.1rem;
+    color: var(--onyx);
+    margin-bottom: 5px;
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    color: var(--sonic-silver);
+    line-height: 1.5;
+}
+
+/* Order Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--onyx);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--salmon-pink);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.text-muted {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Price Box */
+.price-estimation-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px dashed var(--salmon-pink);
+}
+
+.price-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--salmon-pink);
+    margin: 10px 0;
+}
+
+.btn-submit-order {
+    width: 100%;
+    padding: 15px;
+    background: var(--salmon-pink);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-submit-order:hover {
+    background: var(--eerie-black);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Progress Guide Box */
+.progress-guide-box {
+    margin-top: 15px;
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #bbdefb;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.progress-guide-box h6 {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1976d2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.progress-guide-box ul {
+    padding-left: 20px;
+    list-style: disc;
+    margin: 0;
+}
+
+.progress-guide-box li {
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+/* Dynamic Feedback */
+.progress-feedback-text {
+    font-weight: 600;
+    color: var(--eerie-black);
+    margin-top: 8px;
+    font-size: 0.9rem;
+    min-height: 20px;
+    transition: all 0.3s;
+}
+
+.disclaimer-text {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+    color: #888;
+    line-height: 1.4;
+    font-size: 0.8rem;
+}
+
+/* Toggle Box Style for Skripsi */
+.service-type-toggle {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.radio-box {
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-box input {
+    display: none;
+}
+
+.box-content {
+    display: block;
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.box-title {
+    display: block;
+    font-weight: 700;
+    color: var(--onyx);
+    margin-bottom: 5px;
+}
+
+.box-desc {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--sonic-silver);
+}
+
+.radio-box input:checked + .box-content {
+    border-color: var(--salmon-pink);
+    background: #fff5f5;
+}
+
+.radio-box input:checked + .box-content .box-title {
+    color: var(--salmon-pink);
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.check-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.check-box:hover {
+    background: #f9f9f9;
+}
+
+
+.check-box input {
+    width: 20px !important;
+    height: 20px;
+    accent-color: var(--salmon-pink);
+}
+
+/* Utility Classes */
+.mt-3 { margin-top: 15px !important; }
+.mt-4 { margin-top: 25px !important; }
+.mb-5 { margin-bottom: 3rem !important; }
+.text-center { text-align: center !important; }

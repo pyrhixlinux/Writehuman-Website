@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasa Editing & Proofreading - WriteHuman</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/product-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <div class="product-detail-page">
+      <div class="container">
+        
+        <a href="services.html" class="btn-back-service">
+            <ion-icon name="arrow-back-outline"></ion-icon> Kembali ke Layanan
+        </a>
+
+        <!-- Service Header -->
+        <div class="service-header text-center mb-5">
+            <h1 class="service-title">Jasa Editing & Proofreading</h1>
+            <p class="service-subtitle">Perbaiki Typo, Grammar, dan Format Dokumen Skripsi/Tesis</p>
+            <div class="badges-container">
+                <span class="badge-item"><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bebas Typo</span>
+                <span class="badge-item"><ion-icon name="text-outline"></ion-icon> EYD / PUEBI</span>
+                <span class="badge-item"><ion-icon name="document-attach-outline"></ion-icon> Rapih Format</span>
+            </div>
+        </div>
+
+        <div class="product-detail-container layout-grid">
+            
+            <!-- Left Column: Info & Steps -->
+            <div class="left-column">
+                
+                <div class="info-card">
+                    <h3>Tentang Layanan</h3>
+                    <p>Layanan penyuntingan naskah profesional untuk memastikan dokumen Anda bebas kesalahan. Kami memperbaiki kesalahan ketik, tanda baca, tata bahasa, dan konsistensi istilah. Cocok untuk skripsi, tesis, jurnal, atau naskah buku.</p>
+                    <ul class="feature-list">
+                        <li><ion-icon name="checkmark-circle"></ion-icon> <strong>Proofreading:</strong> Koreksi Typo & Tanda Baca.</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> <strong>Editing:</strong> Perbaikan Struktur Kalimat (flow).</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> <strong>Formatting:</strong> Penyesuaian Margin, Font, Daftar Isi, dll.</li>
+                    </ul>
+                </div>
+
+                <div class="steps-card">
+                    <h3>Cara Kerja</h3>
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Upload / Info Dokumen</h4>
+                            <p>Beritahu jumlah halaman yang perlu diedit.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Pilih Paket</h4>
+                            <p>Pilih level editing (Light/Heavy) dan deadline.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Proses Editing</h4>
+                            <p>Tim editor mengerjakan naskah dengan mode "Track Changes".</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Selesai</h4>
+                            <p>Terima file bersih (Clean) dan file coretan (Track Changes).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-preview-card" style="margin-top: 30px; background: #f9f9f9; padding: 20px; border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 15px;">Ulasan Terpilih</h3>
+                    <div class="mini-review">
+                        <div class="stars" style="color: #ffc107; display: flex; align-items: center; gap: 2px;">
+                            <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                        </div>
+                        <p style="font-style: italic; font-size: 0.9rem; color: #555;">"Tesisku jadi rapih banget, formatnya pas sama pedoman kampus. Thank you!"</p>
+                        <small>- Citra (Mahasiswa S2)</small>
+                    </div>
+                    <a href="service-reviews.html?service=editing" style="display: block; margin-top: 15px; text-decoration: none; color: var(--salmon-pink); font-size: 0.9rem; font-weight: 500;">
+                        Lihat Semua Ulasan <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </a>
+                 </div>
+
+            </div>
+
+            <!-- Right Column: Order Form -->
+            <div class="right-column">
+                <div class="order-card">
+                    <h3>Form Order Editing</h3>
+                    <form id="orderForm">
+                        <!-- A. Data User -->
+                        <div class="section-label">Data Pemesan</div>
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" id="custName" required placeholder="Nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Aktif</label>
+                            <input type="email" id="custEmail" required placeholder="email@example.com">
+                        </div>
+
+                        <!-- B. Detail Dokumen -->
+                        <div class="section-label">Detail Dokumen</div>
+                        <div class="form-group">
+                            <label>Jumlah Halaman (Estimasi)</label>
+                            <input type="number" id="pageCount" min="1" placeholder="Cth: 50" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Jenis Layanan</label>
+                            <div class="service-type-toggle">
+                                <label class="radio-box">
+                                    <input type="radio" name="editType" value="proofreading" checked>
+                                    <span class="box-content">
+                                        <span class="box-title">Proofreading</span>
+                                        <span class="box-desc">Typo & PUEBI (Rp 5rb/hal)</span>
+                                    </span>
+                                </label>
+                                <label class="radio-box">
+                                    <input type="radio" name="editType" value="heavying">
+                                    <span class="box-content">
+                                        <span class="box-title">Heavy Edit</span>
+                                        <span class="box-desc">Romba kalimat (Rp 10rb/hal)</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                             <label>Add-on Formatting</label>
+                             <div class="checkbox-group">
+                                 <label class="check-box">
+                                    <input type="checkbox" id="checkFormat"> Rapikan Format (+ Rp 2.000/hal)
+                                </label>
+                             </div>
+                         </div>
+
+                        <!-- C. Deadline -->
+                        <div class="section-label">Pilihan Deadline</div>
+                        <div class="form-group">
+                            <select id="deadlineSelect" required>
+                                <option value="normal" selected>Normal (3-4 Hari)</option>
+                                <option value="fast">Cepat (2 Hari)</option>
+                                <option value="express">Express (24 Jam)</option>
+                            </select>
+                        </div>
+
+                        <!-- Price Info -->
+                        <div class="price-estimation-box">
+                            <label>Estimasi Harga</label>
+                            <div class="price-value" id="priceDisplay">Rp 0</div>
+                            <small class="disclaimer-text">Harga final setelah review file.</small>
+                        </div>
+
+                        <button type="submit" class="btn-submit-order">
+                            Kirim Pesanan <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="./assets/js/html-loader.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Supabase Import Map -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import { submitOrder } from './assets/js/order-service.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const pageCountInput = document.getElementById('pageCount');
+        const priceDisplay = document.getElementById('priceDisplay');
+        const deadlineSelect = document.getElementById('deadlineSelect');
+        const checkFormat = document.getElementById('checkFormat');
+        const editTypeRadios = document.querySelectorAll('input[name="editType"]');
+        const orderForm = document.getElementById('orderForm');
+
+        // Pricing Config
+        const RATES = {
+            proofreading: 5000,
+            heavying: 10000,
+            format_addon: 2000
+        };
+
+        function calculatePrice() {
+            const pages = parseInt(pageCountInput.value) || 0;
+            if (pages <= 0) {
+                priceDisplay.textContent = 'Rp 0';
+                return;
+            }
+
+            const type = document.querySelector('input[name="editType"]:checked').value;
+            let baseRate = RATES[type];
+            
+            if (checkFormat.checked) {
+                baseRate += RATES.format_addon;
+            }
+
+            const deadline = deadlineSelect.value;
+            let multiplier = 1;
+            if(deadline === 'fast') multiplier = 1.3;
+            if(deadline === 'express') multiplier = 1.6;
+
+            const total = Math.ceil(pages * baseRate * multiplier);
+            priceDisplay.textContent = 'Rp ' + total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        // Listeners
+        pageCountInput.addEventListener('input', calculatePrice);
+        deadlineSelect.addEventListener('change', calculatePrice);
+        checkFormat.addEventListener('change', calculatePrice);
+        editTypeRadios.forEach(r => r.addEventListener('change', calculatePrice));
+
+        // Submit
+        orderForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const pages = parseInt(pageCountInput.value) || 0;
+            if (pages <= 0) {
+                alert("Masukkan jumlah halaman!");
+                return;
+            }
+
+            const btn = document.querySelector('.btn-submit-order');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="loader"></span> Memproses...';
+            btn.disabled = true;
+
+            const type = document.querySelector('input[name="editType"]:checked').value;
+            const typeLabel = (type === 'proofreading') ? 'Proofreading' : 'Heavy Edit';
+            const price = priceDisplay.textContent;
+            const deadline = deadlineSelect.options[deadlineSelect.selectedIndex].text;
+            let desc = `${typeLabel} | ${pages} Halaman`;
+            if(checkFormat.checked) desc += " + Formatting";
+
+            // Prepare Data
+            const orderData = {
+                title: `Editing: ${pages} Halaman`,
+                description: desc,
+                service: 'Jasa Editing',
+                status: 'Menunggu Konfirmasi',
+                price: price,
+                deadline: deadline,
+                file_url: null
+            };
+
+            const success = await submitOrder(orderData);
+
+            if (!success) {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        });
+    });
+  </script>
+
+  <style>
+      .section-label {
+          font-weight: 600;
+          color: var(--davys-gray);
+          margin-bottom: 10px;
+          margin-top: 20px;
+          font-size: 0.95rem;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 5px;
+      }
+      .service-type-toggle {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 15px;
+      }
+      .radio-box {
+          cursor: pointer;
+          position: relative;
+      }
+      .radio-box input {
+          position: absolute;
+          opacity: 0;
+      }
+      .box-content {
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          transition: 0.3s;
+          height: 100%;
+          justify-content: center;
+      }
+      .radio-box input:checked + .box-content {
+          border-color: var(--salmon-pink);
+          background: #fff0f0;
+          color: var(--salmon-pink);
+      }
+      .box-title {
+          font-weight: 600;
+          margin-bottom: 5px;
+      }
+      .box-desc {
+          font-size: 0.8rem;
+          color: #666;
+      }
+      .radio-box input:checked + .box-content .box-desc {
+          color: var(--salmon-pink);
+      }
+  </style>
+
+</body>
+
+</html>

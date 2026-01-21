@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasa Pembuatan Makalah - WriteHuman</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/product-detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <div class="product-detail-page">
+      <div class="container">
+        
+        <a href="services.html" class="btn-back-service">
+            <ion-icon name="arrow-back-outline"></ion-icon> Kembali ke Layanan
+        </a>
+
+        <!-- Service Header -->
+        <div class="service-header text-center mb-5">
+            <h1 class="service-title">Jasa Pembuatan Makalah</h1>
+            <p class="service-subtitle">Bantu Tugas Sekolah & Kuliah dengan Riset Pustaka Valid</p>
+            <div class="badges-container">
+                <span class="badge-item"><ion-icon name="book-outline"></ion-icon> Referensi Valid</span>
+                <span class="badge-item"><ion-icon name="shield-checkmark-outline"></ion-icon> 100% Original</span>
+                <span class="badge-item"><ion-icon name="time-outline"></ion-icon> Pengerjaan Cepat</span>
+            </div>
+        </div>
+
+        <div class="product-detail-container layout-grid">
+            
+            <!-- Left Column: Info & Steps -->
+            <div class="left-column">
+                
+                <div class="info-card">
+                    <h3>Tentang Layanan</h3>
+                    <p>Layanan pembuatan makalah dan paper ilmiah dengan standar akademik yang baik. Kami menggunakan referensi dari jurnal & buku kredibel (5-10 tahun terakhir), bukan sekadar copy-paste dari blog sembarangan. Include cover, daftar isi otomatis, dan daftar pustaka rapi.</p>
+                    <ul class="feature-list">
+                        <li><ion-icon name="checkmark-circle"></ion-icon> <strong>Riset Mendalam:</strong> Sesuai topik yang diminta.</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> <strong>Anti Plagiasi:</strong> Ditulis ulang (parafrase) manual.</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> <strong>Format Rapi:</strong> Margin, Font, Spasi sesuai pedoman.</li>
+                    </ul>
+                </div>
+
+                <div class="steps-card">
+                    <h3>Cara Kerja</h3>
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Isi Detail Tugas</h4>
+                            <p>Lengkapi form topic, jenjang pendidikan, dan deadline.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Hitung Estimasi</h4>
+                            <p>Sistem menghitung biaya berdasarkan paket & kesulitan.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Pengerjaan</h4>
+                            <p>Tim melakukan riset & penulisan makalah Anda.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Selesai</h4>
+                            <p>File makalah (Word/PDF) siap didownload di dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Placeholder -->
+                 <div class="reviews-preview-card" style="margin-top: 30px; background: #f9f9f9; padding: 20px; border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 15px;">Ulasan Terpilih</h3>
+                    <div class="mini-review">
+                        <div class="stars" style="color: #ffc107; display: flex; align-items: center; gap: 2px;">
+                            <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                        </div>
+                        <p style="font-style: italic; font-size: 0.9rem; color: #555;">"Wah gila sih, referensinya pake jurnal internasional semua. Dosenku suka banget!"</p>
+                        <small>- Bayu (Mahasiswa Teknik)</small>
+                    </div>
+                    <a href="service-reviews.html?service=makalah" style="display: block; margin-top: 15px; text-decoration: none; color: var(--salmon-pink); font-size: 0.9rem; font-weight: 500;">
+                        Lihat Semua Ulasan <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </a>
+                 </div>
+
+            </div>
+
+            <!-- Right Column: Order Form -->
+            <div class="right-column">
+                <div class="order-card">
+                    <h3>Form Order Makalah</h3>
+                    <form id="orderForm">
+                        <!-- A. Data User -->
+                        <div class="section-label">Data Pemesan</div>
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" id="custName" required placeholder="Nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Aktif</label>
+                            <input type="email" id="custEmail" required placeholder="email@contoh.com">
+                        </div>
+
+                        <!-- B. Education Level -->
+                        <div class="section-label">Jenjang & Detail</div>
+                        <div class="form-group">
+                            <label>Jenjang Pendidikan</label>
+                            <select id="eduLevelSelect" required>
+                                <option value="" disabled selected>-- Pilih Jenjang --</option>
+                                <option value="smp">SMP / Sederajat - Rp 50.000</option>
+                                <option value="sma">SMA / SMK - Rp 75.000</option>
+                                <option value="kuliah">Mahasiswa (S1/D3) - Rp 100.000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Judul / Topik Makalah</label>
+                            <input type="text" id="topicInput" required placeholder="Contoh: Sejarah Perkembangan AI">
+                        </div>
+                        <div class="form-group">
+                            <label>Catatan Khusus (Opsional)</label>
+                            <textarea id="notesInput" rows="3" placeholder="Misal: Minimal 10 halaman, pakai font Times New Roman..."></textarea>
+                        </div>
+
+                        <!-- C. Deadline -->
+                        <div class="section-label">Pilihan Deadline</div>
+                        <div class="form-group">
+                            <select id="deadlineSelect" required>
+                                <option value="normal" selected>Normal (3-4 Hari)</option>
+                                <option value="fast">Cepat (2 Hari)</option>
+                                <option value="express">Express (24 Jam)</option>
+                            </select>
+                        </div>
+
+                        <!-- Price Info -->
+                        <div class="price-estimation-box">
+                            <label>Estimasi Harga</label>
+                            <div class="price-value" id="priceDisplay">Rp 0</div>
+                            <small class="disclaimer-text">Sudah termasuk Cover, Daftar Isi, & Daftar Pustaka.</small>
+                        </div>
+
+                        <button type="submit" class="btn-submit-order">
+                            Kirim Pesanan <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="./assets/js/html-loader.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Page Specific Logic -->
+  <!-- Supabase Import Map -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import { submitOrder } from './assets/js/order-service.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const priceDisplay = document.getElementById('priceDisplay');
+        const eduLevelSelect = document.getElementById('eduLevelSelect');
+        const deadlineSelect = document.getElementById('deadlineSelect');
+        const orderForm = document.getElementById('orderForm');
+        
+        // Pricing Config
+        const PRICES = {
+            'smp': 50000,
+            'sma': 75000,
+            'kuliah': 100000
+        };
+
+        // 1. Pricing Logic
+        function calculatePrice() {
+            const level = eduLevelSelect.value;
+            const deadline = deadlineSelect.value;
+            
+            if (!level) {
+                priceDisplay.textContent = 'Rp 0';
+                return;
+            }
+
+            let basePrice = PRICES[level] || 0;
+            
+            // Deadline Multiplier
+            let multiplier = 1;
+            if(deadline === 'fast') multiplier = 1.3;
+            if(deadline === 'express') multiplier = 1.6;
+
+            const total = Math.ceil(basePrice * multiplier);
+            priceDisplay.textContent = 'Rp ' + total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        // Listeners
+        eduLevelSelect.addEventListener('change', calculatePrice);
+        deadlineSelect.addEventListener('change', calculatePrice);
+
+        // 2. Submit Order
+        orderForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (!eduLevelSelect.value) {
+                alert("Silakan pilih jenjang pendidikan!");
+                return;
+            }
+
+            const btn = document.querySelector('.btn-submit-order');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="loader"></span> Memproses...';
+            btn.disabled = true;
+
+            const topic = document.getElementById('topicInput').value;
+            const level = eduLevelSelect.options[eduLevelSelect.selectedIndex].text.split('-')[0].trim();
+            const price = priceDisplay.textContent;
+            const deadline = deadlineSelect.options[deadlineSelect.selectedIndex].text;
+
+            // Prepare Data
+            const orderData = {
+                title: `Makalah: ${topic}`,
+                description: `Jenjang: ${level}`,
+                service: 'Jasa Makalah',
+                status: 'Menunggu Konfirmasi',
+                price: price,
+                deadline: deadline,
+                file_url: null
+            };
+
+            const success = await submitOrder(orderData);
+
+            if (!success) {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        });
+    });
+  </script>
+
+  <style>
+      /* Page Specific Reuse */
+      .section-label {
+          font-weight: 600;
+          color: var(--davys-gray);
+          margin-bottom: 10px;
+          margin-top: 20px;
+          font-size: 0.95rem;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 5px;
+      }
+  </style>
+
+</body>
+
+</html>

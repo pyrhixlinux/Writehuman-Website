@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - WriteHuman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/supabase-pages.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div id="toast-container"></div>
+
+  <div class="sp-container" style="max-width:1000px;">
+    <div class="sp-header">
+      <h1>Panel Admin</h1>
+      <button id="logout" class="btn btn-danger"><ion-icon name="log-out-outline"></ion-icon> Keluar</button>
+    </div>
+
+    <div id="admin-orders">
+      <div style="text-align:center; padding:50px;">Memuat data pesanan...</div>
+    </div>
+  </div>
+
+  <script type="module" src="./assets/js/admin.js"></script>
+</body>
+</html>
