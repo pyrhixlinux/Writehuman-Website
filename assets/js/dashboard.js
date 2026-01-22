@@ -68,7 +68,7 @@ function renderOrderCard(order) {
       </div>
 
       <div class="order-actions">
-        <a href="order-detail.html?id=${order.id}" class="btn btn-outline">
+        <a href="order-details.html?id=${order.id}" class="btn btn-outline">
           Detail
         </a>
         ${downloadBtn}
