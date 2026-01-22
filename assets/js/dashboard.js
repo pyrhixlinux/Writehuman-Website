@@ -16,7 +16,6 @@ async function loadOrders() {
       title,
       description,
       status,
-      file_url,
       created_at
     `)
     .order("created_at", { ascending: false });
@@ -51,12 +50,8 @@ function renderOrderCard(order) {
     year: "numeric",
   });
 
-  const downloadBtn =
-    order.status === "selesai" && order.file_url
-      ? `<a href="${order.file_url}" target="_blank" class="btn btn-success">
-           Download Hasil
-         </a>`
-      : "";
+  // Download button disabled - file_url column not in database yet
+  const downloadBtn = "";
 
   return `
     <div class="order-card">

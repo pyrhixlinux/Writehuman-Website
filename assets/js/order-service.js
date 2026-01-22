@@ -47,8 +47,7 @@ export async function submitOrder(orderData) {
             user_id: session.user.id,
             title: orderData.title,
             description: fullDescription,
-            status: 'pending', // Must be: pending, proses, or selesai per schema constraint
-            file_url: orderData.file_url
+            status: 'pending'
         });
 
         if (error) {
