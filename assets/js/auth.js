@@ -2,7 +2,7 @@ import { supabase, redirectIfAuthenticated } from "./supabase-client.js";
 import { showToast } from "./toast.js";
 
 // Check if user is already logged in
-redirectIfAuthenticated();
+await redirectIfAuthenticated();
 
 // LOGIN
 const loginForm = document.getElementById("login-form");
