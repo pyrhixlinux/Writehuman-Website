@@ -14,9 +14,10 @@ async function loadOrders() {
     .select(`
       id,
       title,
+      description,
       status,
-      result_file_url,
-      created_at,
+      file_url,
+      created_at
     `)
     .order("created_at", { ascending: false });
 
@@ -51,8 +52,8 @@ function renderOrderCard(order) {
   });
 
   const downloadBtn =
-    order.status === "selesai" && order.result_file_url
-      ? `<a href="${order.result_file_url}" target="_blank" class="btn btn-success">
+    order.status === "selesai" && order.file_url
+      ? `<a href="${order.file_url}" target="_blank" class="btn btn-success">
            Download Hasil
          </a>`
       : "";
