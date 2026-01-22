@@ -370,6 +370,48 @@
     accent-color: var(--salmon-pink);
 }
 
+
+/* Terms & Conditions Section */
+.terms-section {
+    margin-top: 50px;
+    padding: 30px;
+    background: #fff3cd; /* Light warning yellow bg */
+    border: 1px solid #ffeeba;
+    border-radius: 12px;
+}
+
+.terms-section h3 {
+    font-size: 1.3rem;
+    color: #856404;
+    margin-bottom: 20px;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.terms-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #533f03;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.terms-list li ion-icon {
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
 /* Utility Classes */
 .mt-3 { margin-top: 15px !important; }
 .mt-4 { margin-top: 25px !important; }
