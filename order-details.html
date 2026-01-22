@@ -89,25 +89,94 @@
     </div>
   </div>
 
-  <script>
-    // Simple script to load data from localStorage based on URL param
-    // Simulates fetching order details
+  <!-- Supabase Import Map -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import { supabase, getSession } from './assets/js/supabase-client.js';
+
     const params = new URLSearchParams(window.location.search);
     const orderId = params.get('id');
 
-    const orders = JSON.parse(localStorage.getItem('myOrders') || '[]');
-    const order = orders.find(o => o.id === orderId);
+    async function loadOrderDetails() {
+      if (!orderId) {
+        showNotFound();
+        return;
+      }
 
-    if (order) {
-        document.getElementById('orderTitle').textContent = order.title;
-        document.getElementById('orderService').textContent = order.service || 'Jasa Jurnal';
-        document.getElementById('orderPrice').textContent = order.price;
-        document.getElementById('orderDate').textContent = order.date;
-        document.getElementById('orderDeadline').textContent = order.deadline;
-        document.getElementById('orderStatusBadge').textContent = order.status;
-    } else {
-        document.querySelector('.container').innerHTML = '<div style="text-align:center; padding:50px;"><h3>Pesanan tidak ditemukan</h3><a href="dashboard.html">Kembali</a></div>';
+      // Check if it's a local order (from localStorage)
+      if (orderId.startsWith('local-')) {
+        const orders = JSON.parse(localStorage.getItem('myOrders') || '[]');
+        const order = orders.find(o => o.id === orderId);
+        if (order) {
+          displayOrder(order);
+        } else {
+          showNotFound();
+        }
+        return;
+      }
+
+      // Fetch from Supabase
+      const session = await getSession();
+      if (!session) {
+        window.location.replace('login.html');
+        return;
+      }
+
+      const { data: order, error } = await supabase
+        .from('orders')
+        .select('*')
+        .eq('id', orderId)
+        .single();
+
+      if (error || !order) {
+        console.error('Error fetching order:', error);
+        showNotFound();
+        return;
+      }
+
+      displayOrder(order);
     }
+
+    function displayOrder(order) {
+      document.getElementById('orderTitle').textContent = order.title || '-';
+      document.getElementById('orderService').textContent = order.service || 'Layanan Jasa';
+      document.getElementById('orderPrice').textContent = order.price || '-';
+      document.getElementById('orderDeadline').textContent = order.deadline || '-';
+      document.getElementById('orderStatusBadge').textContent = order.status || 'pending';
+      
+      // Format date
+      const date = order.created_at ? new Date(order.created_at).toLocaleDateString('id-ID', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }) : '-';
+      document.getElementById('orderDate').textContent = date;
+
+      // Show description if available
+      if (order.description) {
+        document.getElementById('orderService').textContent = order.description;
+      }
+    }
+
+    function showNotFound() {
+      document.querySelector('.container').innerHTML = `
+        <div style="text-align:center; padding:50px;">
+          <h3>Pesanan tidak ditemukan</h3>
+          <p style="color:#666; margin:10px 0;">ID: ${orderId || 'tidak ada'}</p>
+          <a href="dashboard.html" class="btn-back-service">Kembali ke Dashboard</a>
+        </div>
+      `;
+    }
+
+    loadOrderDetails();
   </script>
 
 </body>
